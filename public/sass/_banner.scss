@@ -1,0 +1,30 @@
+.banner{
+    background:linear-gradient($black-bg, $black-bg), url(../images/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding:3rem 2rem;
+    background-attachment: fixed;
+    text-align: center;
+
+    .content{
+        
+        span{
+            font-size: 2rem;
+            color:$blue;
+        }
+
+        h3{
+            font-size: 4rem;
+            color:$white;
+            margin-top: 1rem;
+        }
+
+        p{
+            max-width: 60rem;
+            margin:1rem auto;
+            font-size: 1.4rem;
+            color:$light-color;
+            line-height: 2;
+        }
+    }
+}

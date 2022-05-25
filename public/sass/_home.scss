@@ -1,0 +1,40 @@
+.home{
+    margin:0 auto;
+    margin-top: 9rem;
+    width: 90%;
+    border-radius: 1rem;
+    background:linear-gradient($black-bg, $black-bg), url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+
+    .content{
+        text-align: center;
+
+        span{
+            font-weight: bolder;
+            color: transparent;
+            -webkit-text-stroke: .1rem $white;
+            font-size: 4vw;
+            display: block;
+        }
+
+        h3{
+            font-size: 6vw;
+            color:$white;
+        }
+
+        p{
+            max-width: 60rem;
+            margin:1rem auto;
+            font-size: 1.4rem;
+            color:$light-color;
+            line-height: 2;
+        }
+    }
+}

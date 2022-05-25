@@ -1,0 +1,275 @@
+.itinerary {
+  margin: 200px 0 100px 0;
+  //   background-color: aquamarine;
+  color: black;
+  height: 100%;
+  width: 100vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .itineraryContainer {
+    font-size: 1.4rem;
+    color: $blue;
+    height: 100%;
+    display: block;
+    width: 80vw;
+    // background-color: lightcoral;
+    font-size: 25px;
+
+    i {
+      color: $blue;
+    }
+
+    p {
+      color: $light-color;
+    }
+  }
+
+  .btns {
+    // background-color: aquamarine;
+    display: flex;
+    gap: 20px;
+    .Itinerarybtn {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 1rem 3rem;
+      font-size: 1.7rem;
+      color: $black;
+      border: $border;
+      border-radius: 5rem;
+      cursor: pointer;
+      background: $blue;
+      &:nth-child(2) {
+        border: none;
+        background: $black;
+        color: $light-color;
+      }
+      &:nth-child(1):hover {
+        background: none;
+        color: $light-color;
+      }
+      &:nth-child(2):hover {
+        border: $border;
+        border-radius: 5rem;
+        cursor: pointer;
+        background: none;
+      }
+    }
+  }
+}
+.bg-img {
+  background-image: url("../images/itinerarygalleryimage1.jpg");
+  background-color: aquamarine;
+  color: black;
+  height: 50vh;
+  width: 100vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .content {
+    text-align: center;
+
+    span {
+      font-weight: bolder;
+      color: transparent;
+      -webkit-text-stroke: 0.1rem $white;
+      font-size: 4vw;
+      display: block;
+    }
+
+    h3 {
+      font-size: 4vw;
+      color: $white;
+    }
+  }
+}
+
+.articleCarousel {
+  // background-color: lightblue;
+
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .carousel-item {
+    img {
+      width: 60vw;
+      height: 60vh;
+    }
+  }
+}
+.accordion {
+  width: 100vw;
+  // background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .containerAccordion {
+    width: 70vw;
+    height: 80vh;
+    padding: 40px 50px 40px 40px;
+    background: $black;
+    margin: 0 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px $blue;
+  }
+  .container .topic {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .content {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content .list {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-right: 50px;
+    position: relative;
+  }
+  .content .list label {
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 25px;
+
+    color: $blue;
+    z-index: 12;
+  }
+  #homeAcc:checked ~ .list label.homeAcc,
+  #blog:checked ~ .list label.blog,
+  #help:checked ~ .list label.help,
+  #code:checked ~ .list label.code,
+  #aboutAcc:checked ~ .list label.about {
+    color: $black;
+  }
+  .content .list label:hover {
+    color: $black;
+  }
+  .content .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    background: $blue;
+  }
+  #homeAcc:checked ~ .list .slider {
+    top: 0;
+  }
+  #blog:checked ~ .list .slider {
+    top: 60px;
+  }
+  #help:checked ~ .list .slider {
+    top: 120px;
+  }
+  #code:checked ~ .list .slider {
+    top: 180px;
+  }
+  #about:checked ~ .list .slider {
+    top: 240px;
+  }
+  .content .text-content {
+    width: 80%;
+    height: 100%;
+    .blog {
+      .inclusionsImg {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        img {
+          width: 400px;
+          height: 400px;
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+  .content .text {
+    display: none;
+  }
+  .content .text .title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .content .text p {
+    text-align: justify;
+  }
+  .content .text-content .homeAcc {
+    display: block;
+  }
+  #homeAcc:checked ~ .text-content .homeAcc,
+  #blog:checked ~ .text-content .blog,
+  #help:checked ~ .text-content .help,
+  #code:checked ~ .text-content .code,
+  #about:checked ~ .text-content .about {
+    display: block;
+    color: $white;
+    font-size: 20px;
+  }
+  #blog:checked ~ .text-content .homeAcc,
+  #help:checked ~ .text-content .homeAcc,
+  #code:checked ~ .text-content .homeAcc,
+  #about:checked ~ .text-content .homeAcc {
+    display: none;
+  }
+  .content input {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 300px) {
+  .accordion {
+    width: 100vw;
+
+    // background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .containerAccordion {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .content .slider {
+      width: 120px;
+    }
+
+    .content .text-content {
+      width: 100%;
+      height: 100%;
+      margin-left: 50px;
+      .blog {
+        .inclusionsImg {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+
+          img {
+            width: 130px;
+            height: 130px;
+            margin-top: 10px;
+            margin-left: 50px;
+          }
+        }
+      }
+    }
+  }
+}
