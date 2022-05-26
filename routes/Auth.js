@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
         callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname)) //get file extension
     }
 });
-
+// comment
 const upload = multer({ storage: storage });
 
 const imageUpload = upload.fields([{ name: 'image' }])
